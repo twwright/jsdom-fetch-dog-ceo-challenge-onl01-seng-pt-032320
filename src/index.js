@@ -17,9 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
   fetchBooks()
 })
 
+const imgUrl = "https://dog.ceo/api/breeds/image/random/4"
 
 function fetchDogs() {
-  return fetch("")
+  return fetch(imgUrl)
+    .then(resp => resp.json())
+    .then(json => renderDogs(json))
+}
+
+function renderDogs(dogs) {
+  const main = document.querySelector("")
+  dogs.forEach(dog => {
+    
+  })
 }
 
 
